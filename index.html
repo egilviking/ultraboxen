@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang='en' class='no-js'>
+<head>
+<meta charset='utf-8' />
+<title>UltraBox++ - JSProject</title>
+<link rel="shortcut icon" href="img/favicon.png"> 
+<link rel="stylesheet/less" type="text/css" href="css/style.less">
+<script src="js/less.min.js"></script>
+</head>
+<body>
+<div id='wrapper'>
+	<h1>UltraBox++</h1>
+	<div id='main'>
+		<div class='stepbox presentationbox'>
+		<p>
+		<span class='bold'>Om UltraBox++</span><br>
+		UltraBox++ mål är att erbjuda en komplett lösning av bildhantering samt bilduppvisning i olika former. <br>
+		Programmeringspråk, HTML, LESSCSS, PHP, JQUERY och AJAX.<br><br>
+		<span class='bold'>Syfte och mål</span><br>
+		Syftet med projektet är att skapa ett multiverktyg som sköter och bakar in större delar utav den process som kan förekomma med just bilder.<br>
+		Detta är frågor som validering, uppladdning, bildstorlekar, bildvisningsdetaljer och bildhantering. Detta projekt har fått en god början och kommit en god bit på vägen i detta, men är ej på långa vägar klart.
+		<br>
+		Denna version har skrapat på ytan utav målen för UltraBox++, funktionaliten fungerar men det är inte det riktiga flytet på allt än.
+		<br><p class='fwbold textcenter'>Nuvarande version</p>
+		<ul>
+		<li>Dynamisk bilduppladdning</li>
+		<li>Dynamisk bilduppdatering.</li>
+		<li>Ajax som kommunicerar med PHP för smidiga formulärhändelser.</li>
+		<li>Slideshow</li>
+		<li>Galleri</li>
+		</ul>
+		<p class='fwbold textcenter'>Nästa versions mål</p>
+		<ul>
+		<li>Kraftfullare verifiering av inkommande data och säkerhet.</li>
+		<li>Smidigare animeringar och effekter.</li>
+		<li>Dynamiskt slideshow och galleri som fångar upp nya bilder utan att ladda om sidan.</li>
+		<li>Fler inställningar i slideshow för olika effekter av bildbyten.</li>
+		<li>Slideshow och galleri som automatiskt skalar om bilder till de rätta proportionerna.</li>
+		</ul>
+		<p>
+		Det finns ett par liknande bildvisningsprogram på webben dessa är.<br>
+		<a href='http://wordpress.org/plugins/slideshow-gallery/screenshots/'>Wordpress Galleri</a><br>
+		<a href='http://mattvarone.com/featured-content/gallery-to-slideshow/'>Gallery to Slideshow</a><br>
+		<a href='http://lokeshdhakar.com/projects/lightbox2/'>Lightbox 2</a><br>
+		<a href='http://www.smilebox.com/slideshows.html'>Smilebox</a><br>
+		
+		Som ni ser så finns det ett par alternativ på webben, dock inget som erbjuder en lösning på hela paketet.
+		Hela paketet är i mina ögon uppladdning, bildhantering lightbox, galleri och slideshow.<br>
+		Ultrabox har en bra början och behöver bara plocka godbitar för att få den sista touchen, både grafiskt och kodmässigt.<br>
+		
+		</p>
+		<p class='fwbold'>UltraBox mål är att kunna erbjuda hela paketet !</p>
+		
+		<p class='fwbold'>Prova en referensinstallationen, följ guiden neråt !</p>
+		<p>
+		<span class='bold'>1. Ladda upp bilder</span><br>
+		Markera bilder, dra och släpp, eller använd den traditionella utforskar miljön.
+		<br><br>
+		<span class='bold'>2. Förhandsvisning av bilder</span><br>
+		De nya bilderna gör en förhandsvisning, visa full storlek, lägg till titel och text, eller ta bort bilden innan de sparas till databasen.	
+		<br><br>
+		<span class='bold'>3. Existerande bilder</span><br>
+		Här visas alla dina bilder. Klicka på valfri bild för att uppdatera dess bildinformation.
+		<br>
+		- Uppdatera titel och text, visa full storlek av bild, visa i galleri eller slideshow eller både och, ta bort bild.
+		<br>
+		- <span class='uline'>För att nya inställningar ska synas i slideshow och galleri, vänligen uppdatera sidan med ett F5 tryck.</span>
+		<br><br>
+		<span class='bold'>4. Galleri och Slideshow</span><br>
+		Slideshow, endast slideshow bilder.<br>
+		Galleri, endast galleri bilder. Hovra med musen på bild för att visa titel och caption, klicka för att visa full storlek. Växla bild igenom att klicka på thumbnails.
+		<br><br>
+		<span class='bold'>5. Prova på !</span><br>
+		Använd referensinstallationen utav programmet här nedanför för att testa ut det. <br>
+		<span class='uline'>För installation och övriga instruktioner vänligen läs readme fil.</span>
+		<br>
+		<a href='www.github.com/egilvikng/ultrabox'>UltraBox på Github</a>
+		<a href='www.github.com/egilvikng/ultrabox'>Ladda hem zipversion av UltraBox</a>
+		</p>
+		
+		</div>
+		<div class='stepbox'>
+			<h2>Upload images</h2>
+			<div id='dragndrop'>
+				<!--Drag N Drop content here -->
+				<h2>Drag and drop files.</h2>
+			</div>
+			<div class='stepbox fleft halfbox'>	
+				<form name="uploadPreview" enctype="multipart/form-data">
+					<input type="file" name="file[]" multiple="true"/><br>
+					<input type='submit' value='Upload and Preview'/>
+				</form>
+			</div>
+		</div>
+		<div class='stepbox clear'>	
+			<h2>Preview images</h2>
+			<img class='spinnernewimages'/>
+			<div id='newimages'>
+				<h3 id='uploadFiles'><!-- Upload complete message here --></h3>
+			
+				<form name="uploadFiles" enctype="multipart/form-data">
+				<!-- New uploaded images shows here -->
+				</form>
+			</div>
+		</div>
+		<div class='stepbox imagesbox'>
+			<h2>Existing images</h2>
+			<div id='images'>
+				<!-- Stored images shows here -->
+			</div>
+		</div>
+		<div class='stepbox slideshowbox'>
+			<h2>Slideshow</h2>
+			<div id='slideshow'><!-- Slideshow shows here --></div>
+		</div>
+		<div class='stepbox gallerybox'>
+			<h2>Gallery</h2>	
+			<div id='gallery'>
+				<div class='gallery-current'>
+					<!-- Clicked image shows here -->
+					<div class='caption'>
+					<!-- Caption show here --></div>
+				</div>
+					<div class='gallery-all'>
+						<!-- Gallery here -->
+				</div>
+			</div> 
+		</div>	
+	</div>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

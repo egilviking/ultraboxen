@@ -1,0 +1,468 @@
+/**
+ * Import base style
+ */
+@import "base.less";
+
+/**
+ * Import fonts
+ */ 
+@import url(http://fonts.googleapis.com/css?family=Lekton:400,700);
+
+/** --------------------------------------------------------------
+ * The product
+ * Here is some variables that change the appearence.
+ * If you are more experienced, scroll down and freestyle.
+ */
+/* --------------------- Caption --------------------------*/
+@caption-padding: 10px;
+@caption-margin: 5px 0 0 0;
+@caption-width: auto;
+@caption-height: auto;
+@caption-bg-color: none;
+@caption-title-color: #EEE;	/*Title color*/
+@caption-desc-color: #FFF; 	/*Text color*/
+@caption-title-size: 16px;	/*Title size*/
+@caption-desc-size: 13px; 	/*Text size*/
+
+/* --------------------- Gallery --------------------------*/ 
+@gallery-padding: 10px;
+@gallery-width: 700px;
+@gallery-height: auto;
+@gallery-bg-color: #111;
+@gallery-small-image-size: 40px; /*Size of thumbnails in gallery only.*/
+@gallery-border: 1px solid #fff;
+@gallery-current-img-border: 1px solid #eee;
+
+/* --------------------- Slideshow --------------------------*/ 
+@slideshow-width: 700px;
+@slideshow-height: 150px;
+@slideshow-bg-color: #eee;
+@slideshow-z-index: 10;
+@slideshow-margin: 0 auto 30px;
+@slideshow-padding: 0;
+@slideshow-border: 1px solid #fff;
+
+/* --------------------- Forms and Input --------------------------*/ 
+
+form{
+	margin:10px 0;
+	clear:both;
+}
+
+input{
+	margin:5px 0;
+}
+
+label{
+	font-weight:bold;
+}
+
+/* Submit buttons styling */
+input{
+	padding:5px;
+	font-weight:bold;
+}
+
+input[type=text]{
+	font-weight:normal;
+	width:400px;
+}
+
+input.submitbutton {
+	display:none;
+	height:auto;
+	width:100%;
+	overflow:auto;
+	padding:5px 25px; /*add some padding to the inside of the button*/
+
+	/*give the button a drop shadow*/
+	-webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+	-moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+	box-shadow: 0 0 4px rgba(0,0,0, .75);
+	font-size:1.1em;
+}
+
+/*Hovering submitbutton*/
+input#submitbutton.green:hover, input#submitbutton.green:focus{
+	/*make the background a little darker*/
+	background-color :#399630;
+	/*reduce the drop shadow size to give a pushed button effect*/
+	-webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+	-moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+	box-shadow: 0 0 1px rgba(0,0,0, .75);
+}
+
+input.red{
+	background:#F88;
+	border:1px solid #F22; 
+	/*style the text*/
+	color:#FFF;
+}
+
+input.green{
+	cursor:pointer; 
+	background:#8F8;
+	border:1px solid #2F2; 
+	/*style the text*/
+	color:#FFF;
+}
+
+input.blue{
+	cursor:pointer; 
+	background:#88F;
+	border:1px solid #22F; 
+	/*style the text*/
+	color:#FFF;
+}
+
+
+
+/* --------------------- # Drag N Drop  --------------------------
+ * Floating left, important!
+ */
+#dragndrop {
+	border:2px dotted #FAF;
+	width:365px;
+	height:100px;
+	color:#92AAB0;
+	text-align:left;
+	vertical-align:middle;
+	padding:10px 10px 10 10px;
+	margin:10px;
+	font-size:150%;
+	line-height:70px;
+	vertical-align:middle;
+	float:left
+}
+
+/* --------------------- Basic CSS For Reference Site --------------------------
+ */
+ 
+@boxbg-color:#888;
+body{
+	font-family: 'Lekton', sans-serif;
+	background:url(../img/bg1.jpg);
+}
+
+h1{
+	font-size:400%;
+	color:#FAF;
+}
+
+h1,h2{
+	text-align:center;
+	display:block;
+}
+
+h2{
+	font-size:140%;
+	color:#EEE;
+}
+
+h3{
+	display:none;
+	height:auto;
+	width:100%;
+	overflow:auto;
+	font-size:120%;
+	text-align:center;
+}
+
+p{
+	text-align:center;
+}
+
+img{
+	margin:5px;
+}
+
+img.spinnernewimages{
+	display:none;
+	margin:0 auto;
+	background:url(../img/loader.gif) no-repeat center center;
+}
+
+#wrapper{
+	margin:0 auto;
+	display:block;
+	height:auto;
+	width:960px;
+	overflow:auto;
+}
+
+#main{
+	display:block;
+	margin:20px auto;
+	background:#AAA;
+	padding:10px;
+	width:900px;
+	height:auto;
+	overflow:auto;
+	border:1px solid @greyLight;
+	.border-radius(10px);
+	.box-shadow();
+}
+
+/* --------------------- Some handy box classes --------------------------
+ */ 
+.stepbox{
+	background:@boxbg-color;
+	display:block;
+	margin:20px auto;
+	padding:10px;
+	width:800px;
+	height:auto;
+	overflow:auto;	
+	border:1px solid @greyLight;
+	.border-radius(10px);
+}
+
+.presentationbox{
+	ul{
+		text-align:center;
+	}
+	p{
+		margin:10px 50px;
+		color:#EEE;
+	}
+	span.bold{
+		font-weight:bold;
+		color:#EEE;
+	}
+	span.uline{
+		text-decoration:underline;
+	}
+	h2{
+		color:#EEE;
+	}
+}
+
+.imagesbox{
+	img{
+		float:left;
+		border:1px solid transparent;
+		opacity:0.8;
+		filter:alpha(opacity=40); /* For IE8 and earlier */
+		
+		&:hover, &.selected{
+			border-color:#eee;
+			opacity:1;
+			filter:alpha(opacity=100); /* For IE8 and earlier */
+			cursor:pointer; 
+		}
+	}
+}
+
+.gallerybox{
+	h2{	
+		margin:5px;
+		padding:5px;
+	}
+}
+
+.slideshowbox{
+	h2{
+		margin:5px;
+		padding:5px;
+	}
+}
+
+/* --------------------- # LIGHTBOX --------------------------
+ */ 
+#overlay{
+	position:fixed;
+	top:0;left:0;
+	width:100%;
+	height:100%;
+	z-index:998;
+	background:#000 url(../img/loader.gif) no-repeat scroll center center;}
+
+#lightbox{
+	margin:0 auto;
+	display:block;
+	width:auto;
+	height:auto;
+	overflow:auto;
+	position:fixed;
+	z-index:999; 
+	
+	img{
+		margin:0;
+		padding:0;
+		display:block;
+	}
+}
+
+/* --------------------- . CAPTION --------------------------
+ */ 
+.caption{
+	display:none;
+	margin:@caption-margin;
+	padding:@caption-padding;
+	height:@caption-height;
+	width:@caption-width;
+	overflow:auto;
+	background:@caption-bg-color;
+	
+	.captionwrapper{
+		margin:0 auto;
+		padding:0;
+		height:auto;
+		width:auto;
+		overflow:auto;
+	}
+	.title{
+		margin:0;
+	}
+	.title h5{
+		text-align:center;
+		margin: 0 0 0 10px;
+		color:@caption-title-color;
+		font-weight:bold;
+		font-size:@caption-title-size;
+	}
+	.desc{
+		margin: 10px;
+	}
+	.desc p{
+		color:@caption-desc-color;
+		font-size:@caption-desc-size;
+	}
+}	
+
+/* --------------------- # Gallery --------------------------
+ */
+#gallery{
+	width:@gallery-width;
+	height:@gallery-height;
+	padding-bottom:@gallery-padding;
+	background: #7d7e7d; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #7d7e7d 0%, #0e0e0e 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, #7d7e7d 0%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, #7d7e7d 0%,#0e0e0e 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, #7d7e7d 0%,#0e0e0e 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center, #7d7e7d 0%,#0e0e0e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	margin:0 auto;
+	margin-bottom:1em;
+  overflow:auto;
+	border-radius:10px;
+	
+	.gallery-current{
+		display:block;
+		height:auto;
+		overflow:auto;
+		padding:@gallery-padding;
+		width:@gallery-width - @gallery-padding*2;
+		margin:0 auto;
+		margin-bottom:@gallery-padding;
+    
+		img{
+			display:block;
+			margin:0 auto;
+			padding:0;
+			float:none;
+			border:@gallery-current-img-border;
+		}
+  }
+	
+  .gallery-all{
+		background-color:#222;
+		border-radius:10px;
+		
+		.clearfix();
+			width:@gallery-width - @gallery-padding*2;
+			margin:0 auto;
+			
+		img{
+			float:left;
+			border:1px solid transparent;
+			padding:3px;
+			width:@gallery-small-image-size;
+			height:@gallery-small-image-size;
+			opacity:0.4;
+			filter:alpha(opacity=40); /* For IE8 and earlier */
+			
+			&:hover, &.selected{
+				border-color:#eee;
+				opacity:1;
+				filter:alpha(opacity=100); /* For IE8 and earlier */
+				cursor:pointer; 
+			}
+    }
+  }
+}
+
+/* --------------------- # Slideshow --------------------------
+ */
+#slideshow{
+	position:relative;
+	
+	margin:@slideshow-margin;
+	padding:@slideshow-padding;
+	width:@slideshow-width;
+	height:@slideshow-height;
+	background-color:@slideshow-bg-color;
+	z-index:@slideshow-z-index;
+	border:@slideshow-border;
+	
+  img{
+		margin:0;
+		padding:0;
+		position:absolute;
+		width:@slideshow-width;
+		height:@slideshow-height;
+	}
+}
+
+/* --------------------- Helping Classes --------------------------
+ */ 
+
+.fwbold{
+	font-weight:bold;
+}
+ 
+.textcenter{
+	text-align:center;
+} 
+.halfbox{
+ margin:10px;
+ width:367px;
+}
+
+.fleft{
+	float:left;
+}
+
+.fright{
+	float:right;
+}
+
+.clear{
+	clear:both;
+} 
+
+.blueinfo{
+	background:#88F;
+	border:1px solid #44F;
+	color:#FFF;
+}
+
+.greeninfo{
+	background:#8F8;
+	border:1px solid #4F4;
+	color:#FFF;
+}
+
+.redinfo{
+	background:#F88;
+	border:1px solid #F44;
+	color:#FFF;
+}
+
+span.note{
+	font-size:70%;
+	color:#444;
+	font-style:italic;
+} 
