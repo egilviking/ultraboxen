@@ -61,6 +61,8 @@ Peka nu din webbläsare mot din utvecklingsserver för att prova referensinstall
 Om felmeddelande `Could not connect to database, hiding connection details.` visas upp. <br>
 Gör om föregående instruktion för att få din databas att fungera.
 
+Glöm inte att skapa en katalog som heter uploads och ge den filrättigheter 777.
+
 Sådär, din UltraBox referens hemsida ska vara uppe och visas !
 Passa på att läsa kända buggar längst ner i denna readme innan du kör igång !
 
