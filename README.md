@@ -27,7 +27,21 @@ $password = ''	//Lösenord
 </pre></code>
 <br>
 Fyll här i din egen databas information, spara sedan filen och ladda upp till din utvecklingsserver.
-
+<br>
+Filer i paketet
+<br>
+```
+readme.md - Filen du läser nu !
+index.html - html kod, samt presentations och exempel sida.
+proccessingimages.php - Databas och serverside funktioner.
+img/ - innehåller en del fina exempelbilder.
+js/ - katalog som innehåller viktiga javascript filer.
+js/jquery.js - Innehåller jquery bibloteket.
+js/less.min.js - Kompiler less css till css.
+css/ - katalog som innehåller viktiga css filer.
+css/style.less - innehåller less css kod, stylar hemsidan. Här redigeras designkoden.
+css/base.less - innehåller less css kod, stylar hemsidan.
+```
 Referensinstallation
 --------------------
 Peka nu din webbläsare mot din utvecklingsserver för att prova referensinstallationen.
