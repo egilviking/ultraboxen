@@ -16,7 +16,7 @@ Ladda hem och packa upp
 -----------------------
 Kör en git clone https://github.com/egilviking/ultrabox, eller ladda hem zip versionen. 
 Navigera till din ultrabox katalog och ladda upp denna till din utvecklingsserver. 
-Ge katalog `uploads/` filrättigheter till 777.
+<strong>Skapa och ge katalog `uploads/` filrättigheter till 777. Katalaogen ska ligga på samma nivå som de proccessimages.php.<strong>
 
 Navigera till filen `proccessimages.php`, rad <strong> 3 </strong> till <strong> 5 </strong> är intressant.
 <code><pre>	
