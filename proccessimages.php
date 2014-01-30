@@ -1,8 +1,8 @@
  <?php
 // Connect to a MySQL database using PHP PDO
-$dsn      = 'mysql:host=blu-ray.student.bth.se;dbname=pesj13;'; //IMPORTANT !
-$login    = 'pesj13';																						//IMPORTANT !
-$password = '88AUg$4P';																					//IMPORTANT !
+$dsn      = ''; //IMPORTANT !
+$login    = '';	//IMPORTANT !																					//IMPORTANT !
+$password = '';	//IMPORTANT !																				//IMPORTANT !
 $options  = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'");
 try {
   $pdo = new PDO($dsn, $login, $password, $options);
