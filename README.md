@@ -26,6 +26,19 @@ $login 	= ''	//Användarnamn
 $password = ''	//Lösenord
 </pre></code>
 <br>
+Skapa en ny tabell i databasen, namnge det till <strong>images</strong>.
+SQL Sats - viktig !
+```
+CREATE TABLE IF NOT EXISTS `images` (
+  `id` int(11) NOT NULL auto_increment,
+  `title` varchar(20) NOT NULL,
+  `caption` varchar(20) NOT NULL,
+  `image` varchar(20) NOT NULL,
+  `slideshow` tinyint(1) NOT NULL,
+  `gallery` tinyint(1) NOT NULL,
+  PRIMARY KEY  (`id`)
+);
+```
 Fyll här i din egen databas information, spara sedan filen och ladda upp till din utvecklingsserver.
 <br>
 Filer i paketet
