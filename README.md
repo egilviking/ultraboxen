@@ -8,6 +8,7 @@ Installation
 * MySQL Databas
 * JavaScript tillåts i webbläsare
 * Nyaste versionen utav FireFox.
+* En ny katalog med namnet uploads.
 * Filrättigheter på katalog uploads.
 * Server
 * Ett gott humör !
